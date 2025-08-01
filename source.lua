@@ -1679,15 +1679,7 @@ local function BlurModule(Frame)
 
     -- Control blur enabling explicitly
     local blurEnabled = false
-    local function EnableBlur(state)
-        blurEnabled = state
-        DepthOfField.Enabled = state
-        -- You could also toggle parts visibility here if needed
-    end
-
-    -- Expose toggle function to Frame (or elsewhere) so you can control blur
-    Frame.EnableBlur = EnableBlur
-
+	
     local frame = Instance.new('Frame')
     frame.Parent = Frame
     frame.Size = UDim2.new(0.95, 0, 0.95, 0)
@@ -2361,7 +2353,7 @@ function Luna:CreateWindow(WindowSettings)
 
 	LunaUI.Enabled = true
 
-	BlurModule(Main)
+	
 
 	if WindowSettings.KeySystem then
 		local KeySettings = WindowSettings.KeySettings
